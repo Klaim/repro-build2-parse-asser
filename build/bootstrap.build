@@ -1,0 +1,7 @@
+project = test_parse_assert_fail
+
+using version
+using config
+using test
+using install
+using dist

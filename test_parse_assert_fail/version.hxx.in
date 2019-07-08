@@ -1,0 +1,33 @@
+#pragma once
+
+// The numeric version format is AAAAABBBBBCCCCCDDDE where:
+//
+// AAAAA - major version number
+// BBBBB - minor version number
+// CCCCC - bugfix version number
+// DDD   - alpha / beta (DDD + 500) version number
+// E     - final (0) / snapshot (1)
+//
+// When DDDE is not 0, 1 is subtracted from AAAAABBBBBCCCCC. For example:
+//
+// Version      AAAAABBBBBCCCCCDDDE
+//
+// 0.1.0        0000000001000000000
+// 0.1.2        0000000001000020000
+// 1.2.3        0000100002000030000
+// 2.2.0-a.1    0000200001999990010
+// 3.0.0-b.2    0000299999999995020
+// 2.2.0-a.1.z  0000200001999990011
+//
+#define TEST_PARSE_ASSERT_FAIL_VERSION       $test_parse_assert_fail.version.project_number$ULL
+#define TEST_PARSE_ASSERT_FAIL_VERSION_STR   "$test_parse_assert_fail.version.project$"
+#define TEST_PARSE_ASSERT_FAIL_VERSION_ID    "$test_parse_assert_fail.version.project_id$"
+
+#define TEST_PARSE_ASSERT_FAIL_VERSION_MAJOR $test_parse_assert_fail.version.major$
+#define TEST_PARSE_ASSERT_FAIL_VERSION_MINOR $test_parse_assert_fail.version.minor$
+#define TEST_PARSE_ASSERT_FAIL_VERSION_PATCH $test_parse_assert_fail.version.patch$
+
+#define TEST_PARSE_ASSERT_FAIL_PRE_RELEASE   $test_parse_assert_fail.version.pre_release$
+
+#define TEST_PARSE_ASSERT_FAIL_SNAPSHOT_SN   $test_parse_assert_fail.version.snapshot_sn$ULL
+#define TEST_PARSE_ASSERT_FAIL_SNAPSHOT_ID   "$test_parse_assert_fail.version.snapshot_id$"
