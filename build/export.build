@@ -3,7 +3,7 @@ $out_root/
   include test_parse_assert_fail/
 }
 
-if($import.target == lib{test_parse_assert_fail} || $import.target == liba{second_lib})
+if($import.target == lib{test_parse_assert_fail} || $import.target == lib{second_lib})
 {
   export $out_root/test_parse_assert_fail/$import.target
 }
